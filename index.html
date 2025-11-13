@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>MD TANVIR SARDARR - Data Scientist & Full-Stack Developer | Projects & ML Dashboards</title>
+  <meta name="description" content="Portfolio of MD TANVIR SARDARR: full-stack web development, Data Science, machine learning, forecasting, dashboards, and full-stack apps built with Python, Flask and modern web stacks." />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+
+  <meta name="author" content="MD Tanvir Sardarr" />
+  <link rel="canonical" href="https://tanvirs.uk/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff"  media="(prefers-color-scheme: light)">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="Tanvir’s Portfolio">
+  <meta property="og:title" content="MD TANVIR SARDARR - Data Scientist & Full-Stack Developer">
+  <meta property="og:description" content="Selected projects in ML, analytics, and full-stack development with code and live demos.">
+  <meta property="og:url" content="https://tanvirs.uk/">
+  <meta property="og:image" content="https://tanvirs.uk/og-image.jpg">
+  <meta property="og:image:alt" content="Screenshots of MD Tanvir Sardarr's data science and web projects">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MD TANVIR SARDARR - Data Scientist & Full-Stack Developer">
+  <meta name="twitter:description" content="Projects in ML, analytics, dashboards, and full-stack apps.">
+  <meta name="twitter:image" content="https://tanvirs.uk/og-image.jpg">
+
+  <!-- Hreflang -->
+  <link rel="alternate" href="https://tanvirs.uk/" hreflang="en-gb" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer"/>
+
+  <style>
+    /* ---------- TOKENS ---------- */
+    :root{
+      --radius:16px;
+      --radius-lg:22px;
+      --shadow-1:0 10px 30px rgba(0,0,0,.10);
+      --shadow-2:0 30px 80px rgba(2,6,23,.25);
+      --ring:0 0 0 3px rgba(37,99,235,.28);
+
+      --primary:#2563eb;
+      --primary-light:#5d74e8;
+      --accent:#7c3aed;
+
+      --ink:#0f172a;
+      --muted:#64748b;
+
+      --bg:#ffffff;
+      --bg-soft:#f6f7fb;
+      --card:#ffffff;
+      --border:#e5e7eb;
+
+      /* project page palette */
+      --proj-bg:var(--bg-soft);
+      --proj-surface:#ffffff;
+      --proj-ink:var(--ink);
+      --proj-border:var(--border);
+      --proj-brand:#60a5fa;
+
+      /* header */
+      --header-height:80px;
+      --header-bg:linear-gradient(90deg, #0EA5E9, #2563EB, #7C3AED);
+      --nav-border: rgba(255,255,255,.18);
+
+      /* hero tints */
+      --tint-a:#eaf6ff;
+      --tint-b:#fff5da;
+
+      /* fonts */
+      --font-nav:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      --font-body:'Manrope',system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      --font-heading:'Fraunces',serif;
+    }
+    .dark-mode{
+      --primary:#60a5fa;
+      --accent:#fbbf24;
+      --ink:#e5e7eb;
+      --muted:#9aa7b8;
+
+      --bg:#0b1222;
+      --bg-soft:#0f172a;
+      --card:#0b1222;
+      --border:#223047;
+
+      --proj-bg:#0f172a;
+      --proj-surface:#0b1222;
+      --proj-ink:#e5e7eb;
+      --proj-border:#223047;
+      --proj-brand:#60a5fa;
+
+      --header-bg: linear-gradient(90deg,#0B1222,#0F172A);
+      --nav-border: rgba(255,255,255,.15);
+
+      --tint-a:#12263f;
+      --tint-b:#2c2613;
+    }
+
+    /* ---------- BASE ---------- */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    html{scroll-padding-top:calc(var(--header-height) + 10px)}
+    body{
+      margin:0;
+      font-family:var(--font-body);
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.75;
+      font-size:clamp(17px,1.05vw,18px);
+      -webkit-font-smoothing:antialiased;
+    }
+    body.menu-open{overflow:hidden}
+
+    img{max-width:100%;display:block}
+    .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    :focus-visible{outline:none;box-shadow:var(--ring)}
+    a{text-decoration:none;color:inherit}
+
+    /* ---------- LAYOUT ---------- */
+    .container{width:94%;max-width:1320px;margin:0 auto}
+    section{padding:100px 0;scroll-margin-top:86px}
+
+    /* ---------- HEADER ---------- */
+    header{
+      position:fixed;top:0;left:0;right:0;z-index:2005;
+      height:var(--header-height);display:flex;align-items:center;justify-content:center;
+      padding:0 10px;border-bottom:1px solid var(--nav-border);
+      backdrop-filter:saturate(160%) blur(12px);
+      background:var(--header-bg);
+      box-shadow:0 10px 30px -10px rgba(0,0,0,.25);
+    }
+    .header-inner{width:100%;max-width:1320px;display:flex;align-items:center;justify-content:space-between;padding:0 12px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo i{color:#fff;font-size:1.2rem}
+    .logo h1{margin:0;color:#fff;font-weight:800;font-size:1.02rem;letter-spacing:.3px;font-family:var(--font-nav)}
+
+    /* desktop nav */
+    nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}
+    nav a{
+      color:#fff;font-weight:700;opacity:.95;position:relative;padding:6px 0;
+      font-family:var(--font-nav);
+      font-size:1rem;
+    }
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--primary));transition:width .25s}
+    nav a:hover{opacity:1}
+    nav a:hover::after{width:100%}
+
+    .icon-btn{background:transparent;border:1px solid var(--nav-border);color:#fff;
+      width:40px;height:40px;border-radius:12px;display:grid;place-items:center;cursor:pointer}
+    .mobile-menu-btn{display:none}
+
+    /* ---------- MOBILE NAV ---------- */
+    .nav-backdrop{display:none;position:fixed;left:0;right:0;top:var(--header-height);bottom:0;background:rgba(0,0,0,.45);backdrop-filter:blur(2px);z-index:1500}
+    .menu-open .nav-backdrop{display:block}
+
+    @media (max-width: 992px){
+      .mobile-menu-btn{display:grid; position:relative; z-index:2006;}
+      nav ul{
+        position:fixed;top:var(--header-height);right:0;bottom:0;left:0;
+        background:#0f172a;
+        color:#fff;
+        backdrop-filter:blur(6px);
+        transform:translateY(100%); opacity:0; visibility:hidden; pointer-events:none;
+        transition:transform .25s ease, opacity .2s ease, visibility .2s ease;
+        flex-direction:column;align-items:flex-start;gap:6px;
+        padding:18px 18px 28px;
+        border-top:1px solid var(--border);
+        box-shadow: 0 -18px 40px rgba(0,0,0,.35);
+        z-index:2000;
+      }
+      nav ul.active{ transform:translateY(0); opacity:1; visibility:visible; pointer-events:auto; }
+      nav li{width:100%}
+      nav ul a{display:block;width:100%;padding:14px 10px;border-radius:10px;color:#fff}
+      nav ul a:hover{background:rgba(255,255,255,.08)}
+    }
+    .dark-mode nav ul{ background:#0f172a; }
+
+    /* ---------- BUTTONS ---------- */
+    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:.85rem 1.35rem; border-radius:12px; font-weight:800; transition:all .2s ease; white-space:nowrap; font-family:var(--font-nav) }
+    .btn-primary{ background:blue; color:#fff; box-shadow:0 4px 15px rgba(52,81,209,.28) }
+    .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 8px 25px rgba(52,81,209,.38) }
+    .btn-outline{ border:1px solid rgba(2,6,23,.25); color:inherit; background:transparent }
+    .dark-mode .btn-outline{ border-color:rgba(255,255,255,.55); color:#fff }
+
+    /* ---------- HERO ---------- */
+    #slider.slider{
+      margin-top:var(--header-height);
+      padding:0;
+      min-height:calc(100vh - var(--header-height));
+      position:relative; overflow:hidden; text-align:center;
+      background:
+        radial-gradient(1200px 700px at 20% -10%, var(--tint-a), transparent 60%),
+        radial-gradient(1000px 600px at 80% 10%, var(--tint-b), transparent 65%),
+        linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.90));
+      color:#0f172a;
+      display:block;
+    }
+    .dark-mode #slider.slider{
+      background:
+        radial-gradient(1200px 700px at 20% -10%, rgba(30,41,59,.85), rgba(11,18,34,.95) 70%),
+        radial-gradient(1000px 600px at 80% 10%, rgba(99,102,241,.18), transparent 65%),
+        linear-gradient(180deg, rgba(11,18,34,.95), rgba(11,18,34,.92));
+      color:#fff;
+    }
+    #slider .slide{
+      position:absolute; inset:0;
+      display:flex; align-items:center; justify-content:center;
+      opacity:0; transform:translateY(60px);
+      transition:transform .75s cubic-bezier(.22,.8,.3,1), opacity .6s ease;
+      will-change:transform, opacity;
+      padding:0 20px;
+    }
+    #slider .slide.active{ opacity:1; transform:translateY(0) }
+    #slider .slide.leaving{ opacity:0; transform:translateY(-60px) }
+
+    /* Only active hero slide can be clicked */
+    #slider { position: relative; }
+    #slider .slide { pointer-events: none; z-index: 0; }
+    #slider .slide.active { pointer-events: auto; z-index: 2; }
+    #slider .slide.leaving { pointer-events: none; }
+
+    .hero-wrap{max-width:1000px}
+    .hero-title{font-family:var(--font-heading);font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.08;font-weight:900;letter-spacing:.2px;margin:0 0 14px}
+    .hero-sub{max-width:860px;margin:0 auto 26px;opacity:.95}
+    .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+    .nav-dots{
+      position:absolute;left:50%;bottom:24px;transform:translateX(-50%);
+      display:flex;gap:10px;z-index:2
+    }
+    .nav-dots .dot{
+      width:10px;height:10px;border-radius:999px;border:2px solid rgba(255,255,255,.9);
+      background:transparent;opacity:.8;cursor:pointer
+    }
+    .nav-dots .dot.active{ background:#fff; opacity:1; transform:scale(1.1) }
+
+    /* ---------- SECTION TITLES ---------- */
+    .section-title{
+      font-family:var(--font-heading);
+      font-size:clamp(1.8rem,2.6vw,2.4rem);font-weight:900;color:var(--ink);
+      position:relative;display:block;margin:0 auto 12px;text-align:center;width:fit-content;
+    }
+    .section-title::after{
+      content:"";position:absolute;left:50%;transform:translateX(-50%);
+      bottom:-10px;width:64%;height:4px;background:linear-gradient(90deg,var(--accent),transparent)
+    }
+    .section-sub{color:var(--muted);margin:0 0 20px;text-align:center}
+
+    /* =========================================================
+       PROJECTS
+       ========================================================= */
+    #projects{background:var(--proj-bg);padding-top:76px;padding-bottom:76px}
+    .p-container{width:min(1680px,98vw);margin:0 auto;padding:0 10px}
+    .p-head{margin-bottom:10px;text-align:center}
+
+    /* Sticky controls */
+    .p-controls{
+      display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0 10px;
+       top:calc(var(--header-height) + 8px); z-index:6;
+    }
+    .p-controls.unstick{ position:static; top:auto; }
+    @media(min-width:780px){ .p-controls{grid-template-columns:1fr auto auto} }
+
+    .p-search{display:flex;align-items:center;gap:10px;border:1px solid var(--proj-border);background:rgb(75, 75, 241);padding:12px 14px;color: white;}
+    .p-search input{flex:1;border:0;outline:0;background:transparent;color:white;font-size:16px}
+    .p-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+    .p-chip{background:green;color:white;border:1px solid var(--proj-border);padding:10px 12px;font-size:14px;cursor:pointer}
+    .p-chip[aria-pressed="true"]{outline:2px solid var(--proj-brand);outline-offset:-2px}
+    .p-sort{display:flex;justify-content:center}
+    .p-sort select{border:1px solid var(--proj-border);background:yellowgreen;color:var(--proj-ink);padding:10px 12px;font-size:16px}
+
+    .p-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:10px}
+    @media(min-width:760px){ .p-grid{grid-template-columns:repeat(2,1fr)} }
+    .p-card{border:1px solid var(--proj-border);background:var(--proj-surface);display:flex;flex-direction:column;min-height:100%}
+    .p-face{
+      border-bottom:1px solid var(--proj-border);
+      aspect-ratio: 4 / 3; position:relative; overflow:hidden; cursor:pointer;
+      background:
+        radial-gradient(60% 80% at 30% 20%, color-mix(in oklab,var(--proj-brand) 40%, transparent), transparent 60%),
+        linear-gradient(135deg, color-mix(in oklab,var(--proj-brand) 15%, transparent), transparent);
+    }
+    .p-face img.bg-img{
+      position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:1; mix-blend-mode:normal;
+      transition:transform .35s ease;
+    }
+    .p-face:hover img.bg-img{ transform:scale(1.02) }
+    .p-body{padding:20px}
+    .p-title{margin:0 0 10px;font-size:20px;line-height:1.35;font-family:var(--font-heading)}
+    .p-desc{margin:0 0 14px;color:var(--muted);font-size:16px}
+    .p-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+    .p-badge{font-size:12px;padding:5px 7px;border:1px solid var(--proj-border)}
+    .p-cta{margin-top:auto;display:flex;gap:12px;flex-wrap:wrap}
+    .p-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--proj-border);background:transparent;color:var(--proj-ink);padding:9px 11px;font-size:14px}
+    .p-btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+
+    /* =========================================================
+       MODAL (centered)
+       ========================================================= */
+    #projectModal{
+      display:none;position:fixed;inset:0;background:rgba(3,7,18,.9);
+      z-index:9999;padding:24px;align-items:center;justify-content:center;
+    }
+    #projectModal .modal-card{
+      width:min(900px,92vw);max-height:90vh;background:var(--card);
+      border:1px solid var(--border);border-radius:var(--radius-lg);
+      padding:18px;display:flex;flex-direction:column;gap:12px;
+      box-shadow:var(--shadow-2);position:relative;overflow:visible;
+    }
+    #projectModal .x{
+      position:absolute;top:12px;right:12px;width:44px;height:44px;border-radius:12px;
+      display:grid;place-items:center;background:var(--primary);color:#fff;border:none;cursor:pointer;font-size:1.15rem;
+      z-index:9999;pointer-events:auto;
+    }
+    #projectModal video,
+    #projectModal iframe,
+    #projectModal img{
+      position:relative; z-index:1; display:block; width:100%; border-radius:12px;
+    }
+    #testimonials{background:var(--bg)}
+    #testimonials .container{text-align:center}
+    .t-wrap{overflow-x:auto; overflow-y:hidden; padding:0 12px 12px; scroll-padding-inline:12px; scrollbar-width:thin; scrollbar-color: rgba(100,116,139,.6) var(--bg-soft); scrollbar-gutter:stable both-edges; -webkit-overflow-scrolling:touch;}
+    .t-wrap::-webkit-scrollbar{height:10px}
+    .t-wrap::-webkit-scrollbar-track{background:var(--bg-soft);border-radius:10px}
+    .t-wrap::-webkit-scrollbar-thumb{background:rgba(100,116,139,.6);border-radius:10px;border:2px solid var(--bg-soft)}
+    .t-track{display:grid;grid-auto-flow:column;grid-auto-columns:min(460px,88%); gap:18px;scroll-snap-type:x mandatory;padding:0 0 2px;justify-content:flex-start}
+    .t-card{scroll-snap-align:start;background:var(--card);border:1px solid var(--border); border-radius:18px;padding:22px;box-shadow:var(--shadow-1);display:flex;flex-direction:column;gap:14px;text-align:left}
+    .t-quote{font-size:1.05rem;line-height:1.7}
+    .t-footer{display:flex;align-items:center;gap:14px}
+    .t-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid var(--border)}
+    .t-meta{font-weight:800;font-family:var(--font-body)}
+    .stars{color:var(--accent);font-size:.95rem}
+
+    #contact{padding:0}
+    .contact-band{
+      width:100%;
+      background:linear-gradient(180deg,var(--bg),var(--bg-soft) 60%);
+      border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+    }
+    .contact-inner{padding:54px clamp(16px,2.8vw,32px); max-width:1600px;margin:0 auto;}
+    .contact-title{font-family:var(--font-heading);font-size:clamp(1.9rem,2.6vw,2.5rem);font-weight:900;margin:0 0 18px;text-align:center}
+    .contact-grid{display:grid;gap:32px;align-items:start;grid-template-columns:1fr 1fr}
+    .contact-lead{font-size:1.08rem;color:var(--muted);margin:0 0 16px;text-align:center}
+    .contact-info h3{margin:0 0 12px;color:var(--primary);font-weight:900;font-size:1.24rem;font-family:var(--font-body)}
+    .info-row{display:flex;gap:14px;align-items:center;margin-bottom:12px;font-size:1.06rem}
+    .info-row .icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;border:1px dashed var(--border)}
+    .foot-social{display:flex;gap:16px;margin-top:6px}
+    .foot-social a{opacity:.85}
+    .foot-social a:hover{opacity:1}
+
+    .form-group{margin-bottom:18px}
+    label{font-weight:700;font-family:var(--font-body)}
+    .input{width:100%;padding:16px 18px;border-radius:12px;border:1px solid var(--border); background:var(--bg-soft);color:var(--ink);font-weight:600;font-size:1rem}
+    .input:focus{border-color:var(--primary);box-shadow:var(--ring)}
+    textarea.input{min-height:170px;resize:vertical}
+    .pill{display:inline-flex;align-items:center;gap:8px;font-weight:900;padding:12px 18px;border-radius:12px;border:1.5px solid var(--primary);background:var(--primary);color:#fff;cursor:pointer}
+
+    /* Center the send button only */
+    .contact-form form{display:grid}
+    .contact-form .pill{justify-self:center}
+    #formToast{
+      position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);
+      background:var(--card);color:var(--ink);border:1px solid var(--border);
+      padding:14px 18px;border-radius:12px;box-shadow:var(--shadow-2);
+      display:none;z-index:10000;font-weight:800
+    }
+
+    @media (max-width: 900px){
+      .contact-grid{grid-template-columns:1fr}
+      .contact-info{order:1}
+      .contact-form{order:2}
+    }
+:root { --cta: #2563eb; }
+
+.hero-cta .btn{
+  background: var(--cta);
+  color:#fff;
+  border:1px solid var(--cta);
+  box-shadow:0 4px 15px rgba(37,99,235,.28);
+}
+.hero-cta .btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 25px rgba(37,99,235,.38);
+}
+
+.hero-cta .btn.btn-outline{
+  background: transparent;
+  color: var(--cta);
+  border-color: var(--cta);
+}
+.hero-cta .btn.btn-outline:hover{
+  background: var(--cta);
+  color:#fff;
+}
+
+.dark-mode { --cta: #60a5fa; }
+
+/* Custom colours for card CTA buttons */
+:root{
+  --btn-video-bg:#ef4444;
+  --btn-video-fg:#ffffff;
+  --btn-code-bg:#10b981;
+  --btn-code-fg:#0b1222;
+  --btn-github-bg:#111827;
+  --btn-github-fg:#ffffff;
+}
+.p-btn[data-open="video"]{ background:var(--btn-video-bg); color:var(--btn-video-fg); border-color:var(--btn-video-bg); }
+.p-btn[data-open="video"]:hover{ transform:translateY(-1px); filter:brightness(1.05); }
+.p-btn[data-open="code"]{ background:var(--btn-code-bg); color:var(--btn-code-fg); border-color:var(--btn-code-bg); }
+.p-btn[data-open="code"]:hover{ transform:translateY(-1px); filter:brightness(1.05); }
+.p-btn[href*="github.com"]{ background:var(--btn-github-bg); color:var(--btn-github-fg); border-color:var(--btn-github-bg); }
+.p-btn[href*="github.com"]:hover{ transform:translateY(-1px); filter:brightness(1.1); }
+.dark-mode{ --btn-github-bg:#1f2937; }
+
+body{ font-size: clamp(15px, 0.95vw, 17px); }
+.hero-title{ font-size: clamp(1.6rem, 3.6vw, 2.6rem); }
+.hero-sub{ font-size: clamp(0.95rem, 1.1vw, 1.05rem); }
+#slider .slide .hero-title:first-of-type{ font-size: clamp(1.8rem, 3.9vw, 2.8rem); }
+#slider .slide .hero-title:nth-of-type(2){ font-size: clamp(1.4rem, 3.1vw, 2.2rem); }
+nav a{ font-size: 0.95rem; }
+.section-title{ font-size: clamp(1.6rem, 2.2vw, 2rem); }
+.contact-title{ font-size: clamp(1.6rem, 2.2vw, 2rem); }
+.p-title{ font-size: 18px; }
+.p-desc{ font-size: 12px; }
+.p-badge{ font-size: 11px; }
+.p-btn{ font-size: 13px; }
+
+.hero-title{ font-size: clamp(1.4rem, 3.0vw, 2.2rem); }    /* was 1.6–2.6rem */
+#slider .slide .hero-title:first-of-type{ font-size: clamp(1.6rem, 3.4vw, 2.4rem); }
+#slider .slide .hero-title:nth-of-type(2){ font-size: clamp(1.2rem, 2.6vw, 1.8rem); }
+
+nav a{ font-size: 0.9rem; }                /* was 0.95rem */
+.section-title{ font-size: clamp(1.4rem, 2vw, 1.8rem); }
+.contact-title{ font-size: clamp(1.4rem, 2vw, 1.8rem); }
+.p-title{ font-size: 17px; }               /* card titles */
+.p-desc{ font-size: 12px; }                /* card description */
+.p-badge{ font-size: 8px; }
+.p-btn{ font-size: 12px; }
+
+#projects .p-desc{
+  color: var(--proj-ink) !important; 
+  opacity: 1;
+}
+    footer{background:rgb(68, 68, 222);border-top:1px solid var(--border)}
+    .footer-wrap{max-width:1320px;margin:0 auto;padding:36px 16px}
+    .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px;align-items:start;color: white;}
+    @media (max-width: 900px){ .f-grid{grid-template-columns:1fr} }
+    .f-brand{display:flex;gap:12px;align-items:center}
+    .f-brand i{font-size:1.2rem;color:white}
+    .f-title{font-weight:900;letter-spacing:.2px}
+    .f-desc{color:white;margin:8px 0 14px}
+    .f-copywarn{color:white;font-size:.92rem;margin-top:6px}
+    .f-links, .f-contact{display:grid;gap:10px;color: white;}
+    .f-link{opacity:.9}
+    .f-link:hover{opacity:1;text-decoration:underline}
+    .f-right{display:grid;gap:10px}
+    .f-social-list{display:grid;gap:10px}
+    .f-social-list a{display:flex;align-items:center;gap:10px;border:1px solid var(--border);border-radius:12px;padding:10px 12px;opacity:.9;color: white;}
+    .f-social-list a:hover{opacity:1;transform:translateY(-1px)}
+    .f-bottom{margin-top:22px;padding-top:18px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .f-made{color:white;font-size:.95rem}
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebSite", "name": "Tanvir’s Portfolio", "url": "https://tanvirs.uk/", "publisher": { "@id": "#person" } },
+    {
+      "@type": "Person","@id":"#person","name":"MD Tanvir Sardarr","url":"https://tanvirs.uk/","image":"https://tanvirs.uk/pp1.jpg",
+      "jobTitle":"Data Scientist & Full-Stack Developer","email":"mailto:tanvir.xf@gmail.com","telephone":"+447438888381",
+      "address":{"@type":"PostalAddress","addressLocality":"Liverpool","addressCountry":"GB"},
+      "sameAs":[
+        "https://github.com/mdtanvirsardarr/","https://www.linkedin.com/in/tanvir153",
+        "https://youtube.com/@nextraw.studio","https://www.kaggle.com/mdtanvirsardarr",
+        "https://www.researchgate.net/profile/Md-Tanvir-Sardarr"
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+  <a class="sr-only" href="#projects">Skip to projects</a>
+
+  <!-- HEADER -->
+  <header id="header" role="navigation" aria-label="Primary">
+    <div class="header-inner">
+      <div class="logo" aria-label="Site logo">
+        <i class="fas fa-code" aria-hidden="true"></i>
+        <h1>Create, Control, Code.</h1>
+      </div>
+
+      <nav>
+        <ul id="navMenu" role="menubar" aria-label="Primary menu">
+          <li role="none"><a role="menuitem" href="index.html#home">Home</a></li>
+          <li role="none"><a role="menuitem" href="about.html" rel="author">About</a></li>
+          <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+          <li role="none"><a role="menuitem" href="galary.html">Gallery</a></li>
+          <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <button class="icon-btn" id="darkModeToggle" title="Toggle Dark Mode" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+  <div id="navBackdrop" class="nav-backdrop" aria-hidden="true"></div>
+
+  <!-- HERO -->
+  <section id="slider" class="slider" aria-label="Hero">
+    <div class="slide active">
+      <div class="hero-wrap">
+        <div class="hero-title">Hi! <br> I am MD TANVIR SARDARR</div>
+        <div class="hero-title">Aspiring Data Scientist</div>
+        <p class="hero-sub">I build end to end systems that take raw data to calibrated predictions, clear explanations, and clean dashboards.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn">Explore Projects</a>
+          <a href="about.html" class="btn btn-outline">About Me</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="hero-wrap">
+        <div class="hero-title">Full Stack Developer: APIs, Dashboards and Pipelines</div>
+        <p class="hero-sub">Python, Flask, Django, MongoDB, SQLite Backends, JWT auth, and responsive UIs with performance and auditability baked in.</p>
+        <div class="hero-cta">
+          <a href="galary.html" class="btn btn-outline">Visual Gallery</a>
+          <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-dots" aria-label="Slide navigation">
+      <button class="dot active" aria-label="Go to slide 1" onclick="goToSlide(0)"></button>
+      <button class="dot" aria-label="Go to slide 2" onclick="goToSlide(1)"></button>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" aria-label="Projects">
+    <div class="p-container">
+      <div class="p-head">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">A curated mix of ML systems, data visualisations, and full stack apps. Use the filters, search, and Load more to browse everything.</p>
+      </div>
+
+      <div class="p-controls" id="pControls" aria-label="Filters and tools">
+        <div class="p-search" role="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.471 6.471 0 0 0 1.57-4.23C15.99 6.01 13.32 3.34 10 3.34S4.01 6.01 4.01 9.5 6.68 15.66 10 15.66c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l4.25 4.25 1.27-1.27L15.5 14zM10 14c-2.48 0-4.5-2.02-4.5-4.5S7.52 5 10 5s4.5 2.02 4.5 4.5S12.48 14 10 14z"/></svg>
+          <input id="pSearch" type="search" placeholder="Search by title, stack, or description…" aria-label="Search projects"/>
+        </div>
+
+        <div class="p-chips" role="toolbar" aria-label="Filter by category">
+          <button class="p-chip" data-filter="all" aria-pressed="true">All</button>
+          <button class="p-chip" data-filter="Machine Learning" aria-pressed="false">Machine Learning</button>
+          <button class="p-chip" data-filter="Full Stack" aria-pressed="false">Full Stack</button>
+          <button class="p-chip" data-filter="Data Visualization" aria-pressed="false">Data Visualization</button>
+        </div>
+
+        <div class="p-sort">
+          <label for="pSort" class="sr-only">Sort</label>
+          <select id="pSort" aria-label="Sort projects">
+            <option value="new">Newest first</option>
+            <option value="old">Oldest first</option>
+            <option value="az">A to Z</option>
+            <option value="za">Z to A</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="p-grid" id="pGrid" aria-live="polite"></div>
+
+      <div style="display:flex;justify-content:center;gap:12px;align-items:center;margin-top:20px">
+        <button id="loadMore" class="p-chip" type="button" style="padding:10px 20px">Load more</button>
+        <span id="pCount" class="section-sub" aria-live="polite"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-label="Project details">
+    <div class="modal-card" role="document">
+      <button class="x" id="modalClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div id="projectModalBody" style="display:flex;flex-direction:column;gap:12px"></div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" aria-label="Testimonials">
+    <div class="container">
+      <h2 class="section-title">Testimonials</h2>
+      <p class="section-sub">What mentors say.</p>
+      <div class="t-wrap" aria-roledescription="carousel">
+        <div class="t-track">
+          <article class="t-card" itemscope itemtype="https://schema.org/Review">
+            <p class="t-quote" itemprop="reviewBody">
+              Tanvir consistently demonstrates strong analytical thinking and a firm grasp of statistical modelling and machine learning.
+              He applies theory to real problems with rigour and communicates clearly.
+            </p>
+            <div class="t-footer">
+              <img class="t-avatar" src="silvester-czanner.jpg" alt="">
+              <div>
+                <div class="t-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">Professor Silvester Czanner</span>
+                </div>
+                <div class="stars" aria-label="5 out of 5"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="t-role">Head of School Computer Science, University of Chester</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="t-card" itemscope itemtype="https://schema.org/Review">
+            <p class="t-quote" itemprop="reviewBody">
+              Strong aptitude for data science and an exceptional work ethic. Applies analytical thinking to complex problems
+              and proactively goes beyond the required work.
+            </p>
+            <div class="t-footer">
+              <img class="t-avatar" src="Paul-Underhill.jpg" alt="">
+              <div>
+                <div class="t-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">Paul Underhill</span>
+                </div>
+                <div class="stars" aria-label="5 out of 5"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="t-role">Programme Leader, Dept. of Computer Science, University of Chester</div>
+              </div>
+            </div>
+          </article>
+          <article class="t-card" itemscope itemtype="https://schema.org/Review">
+  <p class="t-quote" itemprop="reviewBody"> He combines strong technical skill with a deep passion for solving complex problems and has delivered impressive projects. He is hardworking, collaborative, and communicates clearly an excellent candidate.
+  </p>
+  <div class="t-footer">
+    <img class="t-avatar" src="xiaofei Nan.png" alt="Professor Xiaofei Nan — Zhengzhou University">
+    <div>
+      <div class="t-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <span itemprop="name">Professor Xiaofei Nan</span>
+      </div>
+      <div class="stars" aria-label="5 out of 5">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <div class="t-role">
+        Ph.D. in Artificial Intelligence; Associate Professor - Computer Science &amp; Artificial Intelligence, Zhengzhou University.
+      </div>
+    </div>
+  </div>
+</article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-label="Contact">
+    <div class="contact-band">
+      <div class="contact-inner">
+        <h2 class="contact-title">Get in touch</h2>
+        <p class="contact-lead">I'm currently exploring new opportunities where I can apply my expertise in Data Science and Full-Stack Development. Whether you're looking for a dedicated team member or need help with a specific project, I'd love to chat about how we can work together. <br>Don't hesitate to reach out! Whether you have a question or just want to say hi, <br>I'll do my best to get back to you!</p>
+
+          <div class="contact-form">
+            <form id="contactForm" action="https://formsubmit.co/tanvir.xf@gmail.com" method="POST" novalidate>
+              <input type="hidden" name="_subject" value="New message from portfolio">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="#contact">
+              <input type="text"   name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+              <div class="form-group">
+                <label for="name">Your name</label>
+                <input class="input" id="name" name="name" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Your email</label>
+                <input class="input" id="email" name="email" type="email" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input class="input" id="subject" name="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Your message</label>
+                <textarea class="input" id="message" name="message" required></textarea>
+              </div>
+
+              <button type="submit" class="pill"><span id="submitText">Send message</span><i id="submitIcon" class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-wrap">
+      <div class="f-grid">
+        <div>
+          <div class="f-brand">
+            <i class="fas fa-code" aria-hidden="true"></i>
+            <div class="f-title">Tanvir’s Portfolio</div>
+          </div>
+          <p class="f-desc">Data Science and Full-Stack builds with a focus on calibrated ML, clean APIs, and usable dashboards.</p>
+        </div>
+
+        <div class="f-contact" itemscope itemtype="https://schema.org/Person" aria-label="Contact details">
+          <strong class="f-title" itemprop="name">MD Tanvir Sardarr</strong>
+          <a class="f-link" href="mailto:tanvir.xf@gmail.com" itemprop="email"><i class="fa-solid fa-envelope" aria-hidden="true"></i> tanvir.xf@gmail.com</a>
+          <a class="f-link" href="tel:+447438888381" itemprop="telephone" aria-label="Phone: +44 7438 888 381"><i class="fa-solid fa-phone" aria-hidden="true"></i> +44&nbsp;7438&nbsp;888&nbsp;381</a>
+          <span class="f-link" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span itemprop="addressLocality">Liverpool</span>, <span itemprop="addressCountry">United Kingdom</span>
+          </span>
+        </div>
+
+        <div class="f-right">
+          <strong class="f-title">Find me online</strong>
+          <div class="f-social-list">
+            <a href="https://github.com/mdtanvirsardarr/" target="_blank" rel="noopener noreferrer me" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/tanvir153" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a href="https://youtube.com/@nextraw.studio?si=x_evKelOdcnq8-1Z" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i> YouTube</a>
+            <a href="https://www.kaggle.com/mdtanvirsardarr" target="_blank" rel="noopener" aria-label="Kaggle"><i class="fab fa-kaggle"></i> Kaggle</a>
+            <a href="https://www.researchgate.net/profile/Md-Tanvir-Sardarr" target="_blank" rel="noopener" aria-label="ResearchGate"><i class="fab fa-researchgate"></i> ResearchGate</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="f-bottom">
+        <p class="f-made">© <span id="current-year"></span> Tanvir’s. All rights reserved.</p>
+        <p class="f-made">Built with Python, Flask, and a lot of coffee.</p>
+      </div>
+    </div>
+  </footer>
+
+ <script>
+  /* ---------- DARK MODE ---------- */
+  const body = document.body;
+  const darkToggle = document.getElementById('darkModeToggle');
+  const saved = localStorage.getItem('darkMode');
+  if (saved === 'enabled') { body.classList.add('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-sun"></i>'; }
+  darkToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const on = body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', on ? 'enabled' : 'disabled');
+    darkToggle.innerHTML = on ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  });
+
+  /* ---------- MOBILE NAV ---------- */
+  const navMenu = document.getElementById('navMenu');
+  const mobileBtn = document.getElementById('mobileMenuBtn');
+  const navBackdrop = document.getElementById('navBackdrop');
+
+  function openMenu(){
+    navMenu.classList.add('active');
+    document.body.classList.add('menu-open');
+    mobileBtn.setAttribute('aria-expanded','true');
+    mobileBtn.innerHTML='<i class="fas fa-xmark"></i>';
+  }
+  function closeMenu(){
+    navMenu.classList.remove('active');
+    document.body.classList.remove('menu-open');
+    mobileBtn.setAttribute('aria-expanded','false');
+    mobileBtn.innerHTML='<i class="fas fa-bars"></i>';
+  }
+  mobileBtn.addEventListener('click',(e)=>{
+    e.stopPropagation();
+    navMenu.classList.contains('active') ? closeMenu() : openMenu();
+  });
+  navBackdrop.addEventListener('click', closeMenu);
+  navMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
+  addEventListener('keydown',(e)=>{ if(e.key==='Escape') closeMenu(); });
+  document.addEventListener('click',(e)=>{
+    if(!document.body.classList.contains('menu-open')) return;
+    const insideMenu = navMenu.contains(e.target);
+    const onButton = mobileBtn.contains(e.target);
+    if(!insideMenu && !onButton) closeMenu();
+  });
+
+  /* ---------- HERO SLIDER ---------- */
+  const slides=[...document.querySelectorAll('#slider .slide')];
+  const dots=[...document.querySelectorAll('#slider .dot')];
+  let current=0, timer=null;
+
+  function setActive(next){
+    if(next===current) return;
+    const prev=current;
+    if(prev>=0){
+      slides[prev].classList.add('leaving');
+      setTimeout(()=>slides[prev].classList.remove('leaving','active'), 600);
+      dots[prev].classList.remove('active');
+    }
+    slides[next].classList.add('active');
+    dots[next].classList.add('active');
+    current=next;
+  }
+  function goToSlide(i){
+    const n=(i+slides.length)%slides.length;
+    setActive(n);
+    restartTimer();
+  }
+  function nextSlide(){ goToSlide(current+1); }
+  function restartTimer(){ clearInterval(timer); timer=setInterval(nextSlide, 5000); }
+  restartTimer();
+  window.goToSlide=goToSlide;
+
+  /* ---------- PROJECTS DATA ---------- */
+  const PROJECTS = [
+    /* ========= ML + FULL STACK ========= */
+    {
+      id: "dropout",
+      categories: ["Machine Learning", "Full Stack"],
+      subcats: ["Student Dropout Risk Prediction"],
+      year: 2025,
+      title: "Student Dropout Risk Prediction using Calibrated Random Forest",
+      image: "Dropout Predictoion.png",
+      summary:
+        "An early stundents dropout risk prediction system that estimates risk from academic, behavioural, and engagement signals, explains the drivers, and logs every prediction for audit. It trains a calibrated Random Forest with fixed Low/Medium/High risk tiers derived from validation thresholds and surfaces SHAP explanations at both global and per-student levels. Calibration is verified with reliability diagrams and ECE. Each request is written to SQLite (inputs, probabilities, final label, factor vector), with CSV/JSON export and a role-aware UI (Student quick risk check; Admin dashboard, Staff Profile, Email system within admin-staff and students). Validation results: ROC AUC 0.86, F1 0.80, Precision 0.78, Recall 0.82.",
+      stack: ["Python", "Flask", "SQLite", "Random Forest", "Calibration", "SHAP", "Monte Carlo Simulation"],
+      metrics: { "ROC AUC": "0.86", "F1": "0.80", "Precision": "0.78", "Recall": "0.82" },
+      links: { video: "Dropout Risk Predictor.mp4" }
+    },
+    {
+      id: "health_api",
+      categories: ["Machine Learning", "Full Stack"],
+      subcats: ["Lifestyle Disease Risk"],
+      year: 2025,
+      title: "Lifestyle Disease Risk Prediction and Lifestyle Recommendations using Decision Tree and KNN",
+      image: "Preventify.png",
+      summary:
+        "A lightweight Flask service that estimates your risk for diabetes, hypertension, CKD, and NAFLD and then suggests practical lifestyle changes. It trains a calibrated Decision Tree (with versioned models and tracked metrics) and uses a KNN-based recommender to point low-medium-high risk peer examples. The JSON API is schema-checked, automatically computes BMI using WHO BMI classes, and assigns clear per-disease tiers plus an overall risk. Each user gets a simple history with ‘explain’ tags (sleep, activity, sugar, alcohol), and you can export logs to CSV. Endpoints are CORS-friendly, logs are paginated, and lightweight session auth keeps things private; uploads are also size-limited for safety.",
+      stack: ["Python", "Flask", "SQLAlchemy", "SQLite", "scikit learn", "Calibration", "KNN"],
+      links: { video: "Preventify.mp4" }
+    },
+    {
+      id: "acad_career",
+      categories: ["Machine Learning", "Full Stack"],
+      subcats: ["Academic Risk", "Career Recommendation", "Chatbot"],
+      year: 2025,
+      title:
+        "Academic performance Risk Prediction & Career Recommendation System - Calibrated Random Forest (DT baseline), SHAP-guided recs, Chatbot and Google Calendar",
+      image: "jakka.png",
+      summary:
+        "Two-track system. (1) Academic performance risk: a calibrated Random Forest (Decision Tree as baseline) chosen by PR-AUC on a stratified train/val/test split with fixed seeds and leakage-safe preprocessing; ROC-AUC, F1@0.50, Accuracy and Brier are reported with curves and importances. (2) Career recommendation: SHAP-guided rules convert each student’s strengths/interests into recommended career clusters, with comparison of DT vs RF using macro-F1 and Top-1/Top-3 accuracy. The dashboard lets you simulate, train, compare, calibrate, set thresholds, bands, run predictions, and export logs. A built-in chatbot explains results and actions, and you can create follow-up tasks directly via Google Calendar integration.",
+      stack: ["Python", "Flask", "SQLite", "Random Forest", "Decision Tree", "Calibration", "SHAP"],
+      links: { video: "Jakka .mp4" }
+    },
+    {
+      id: "burnoutguard",
+      categories: ["Machine Learning", "Full Stack"],
+      subcats: ["Burnout Risk Prediction", "Sentiment"],
+      year: 2025,
+      title:
+        "BurnoutGuard - Calibrated XGBoost vs Logistic Regression (champion by PR-AUC & Brier) and VADER/TextBlob sentiment",
+      image: "Anushaimg.png",
+      summary:
+        "End-to-end burnout risk app that fuses structured HR features with text sentiment. The admin dashboard trains and compares XGBoost (primary) and Logistic Regression (baseline) on the same split, selects a calibrated champion by PR-AUC with Brier/ECE as tie-breakers, and provides confusion matrices, ROC/PR curves, feature importances, a threshold explorer, risk calculator, cohort view, and simulation tools. Probabilities are calibrated and logged to SQLite with export (CSV/Parquet). Free-text feedback is analysed via VADER/TextBlob and blended into the score and guidance. Current run: XGB—ROC-AUC 0.765, PR-AUC 0.545, ECE 0.028; LR—ROC-AUC 0.758, PR-AUC 0.547, ECE 0.013.",
+      stack: ["Python", "Flask", "SQLite", "XGBoost", "Logistic Regression", "Calibration", "SHAP"],
+      links: { video: "Anusha.mp4" }
+    },
+
+    /* ========= Data Visualization ========= */
+    {
+      id: "derma",
+      categories: ["Data Visualization", "Machine Learning"],
+      subcats: ["Automated Analysis"],
+      year: 2025,
+      title: "Dermatology Data Analysis",
+      image: "18.png",
+      summary:
+        "Analysed dermatology datasets covering EDA, modelling, clustering, and artifact logging. Data: 34 features (12 clinical, 22 histopathological) with UTF-8 safe loading, median imputation (e.g., age), StandardScaler, and an 80/20 split (random_state=42). EDA outputs profile summaries and missingness heatmaps. Supervised: Random Forest and kNN tuned with 5-fold CV. RF ≈100% test accuracy on full & histopathology subsets; kNN ≈98.65% on full. KMeans peaks at k=4 with ARI≈0.806; DBSCAN unstable. Runs log params, CV results, timings, and figure paths to JSON.",
+      stack: ["Python", "scikit learn", "NumPy", "pandas", "Matplotlib"],
+      links: {
+        github: "https://github.com/tanvir153/Dermatological-Disease-Classification-Clustering",
+        doc: "ML Report.pdf"
+      }
+    },
+    {
+      id: "amazon",
+      categories: ["Data Visualization", "Machine Learning"],
+      subcats: ["Sales and Reviews", "NLP"],
+      year: 2025,
+      title: "Amazon Sales & Review Analysis: ETL, VADER Sentiment, Plotly Dashboard",
+      image: "2.png",
+      summary:
+        "Analysis of Amazon reviews and sales. Pipelines ingest JSON/CSV, clean and de-duplicate records, and filter languages. Sentiment via VADER; diagnostics for rating distributions. Time-series of review volume/seasonality, word clouds and keyword lift by star rating, an interactive Plotly dashboard with drill-downs.",
+      stack: ["Python", "pandas", "VADER", "Plotly", "Word Cloud", "Matplotlib"],
+      links: {
+        github: "https://github.com/tanvir153/dataScienceProject1",
+        code: "amazon.html"
+      }
+    },
+    {
+      id: "sales",
+      categories: ["Data Visualization", "Machine Learning"],
+      subcats: ["Forecasting"],
+      year: 2024,
+      title: "Retail Sales Analysis and Prediction",
+      image: "17.png",
+      summary:
+        "Interactive sales dashboard showing KPIs (revenue $7.26M from 178K orders), month/day-of-week trends and seasonality, top customers and products, and state performance (CA+TX ≈34.18%). Repeat-customer rate ≈41.21%. A modelling section uses polynomial Ridge regression with lag/rolling and cyclical features to forecast the best-selling product 30 days ahead, followed by actionable recommendations (e.g., BFCM inventory ~1.7× typical demand; email retargeting ROI ≈4.2×).",
+      stack: ["Python", "pandas", "scikit learn", "Plotly"],
+      links: {
+        github: "https://github.com/tanvir153/retail-sales-trend-forecasting",
+        code: "SalesTrends.html"
+      }
+    },
+
+    /* ========= Full-stack Docs ========= */
+    {
+      id: "resto_uk",
+      categories: ["Full Stack"],
+      subcats: ["Restaurant Management"],
+      year: 2025,
+      title: "Restaurant Management System UK-Ongoing",
+      image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=60",
+      summary: "Operational system for UK restaurants: menu, orders, tables, staff rota, inventory, and HMRC-friendly receipts.",
+      stack: ["Python", "Flask", "SQLite or PostgreSQL", "JWT", "Bootstrap", "Chart.js"]
+    }
+  ];
+
+  /* ---------- PROJECT RENDERING ---------- */
+  const grid = document.getElementById('pGrid');
+  const search = document.getElementById('pSearch');
+  const sort   = document.getElementById('pSort');
+  const chipBar = document.querySelector('.p-chips');
+  const chips  = [...chipBar.querySelectorAll('.p-chip')];
+  const loadMoreBtn = document.getElementById('loadMore');
+  const pCount = document.getElementById('pCount');
+
+  let activeCategory = 'all';
+  let term = '';
+  let currentResults = [];
+  const pageSize = 8;
+  let expanded = false;
+
+  function cardHTML(p){
+    const tags=(p.stack||[]).map(t=>`<span class="p-badge">${t}</span>`).join("");
+    const metrics=p.metrics?`<div class="p-badges">${Object.entries(p.metrics).map(([k,v])=>`<span class="p-badge">${k}: ${v}</span>`).join("")}</div>`:"";
+    const hasImage = !!p.image;
+
+    return `
+    <article class="p-card" data-category="${(p.categories||[]).join(',')}">
+      <div class="p-face" ${hasImage ? `onclick="openProjectContent('${p.id}','image')"` : ''} aria-label="Open image preview">
+        ${hasImage ? `<img class="bg-img" loading="lazy" src="${encodeURI(p.image)}" alt="${p.title}">` : ''}
+      </div>
+      <div class="p-body">
+        <h3 class="p-title">${p.title}</h3>
+        <p class="p-desc">${p.summary}</p>
+        <div class="p-badges">${tags}</div>
+        ${metrics}
+        <div class="p-cta">
+          ${p.links?.video ? `<button class="p-btn" data-open="video" data-id="${p.id}"><i class="fas fa-video"></i> Video</button>`:''}
+          ${p.links?.code  ? `<button class="p-btn" data-open="code"  data-id="${p.id}"><i class="fas fa-code"></i> View Code</button>`:''}
+          ${p.links?.github? `<a class="p-btn" href="${p.links.github}" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>`:''}
+          ${p.links?.doc   ? `<a class="p-btn" href="${encodeURI(p.links.doc)}" target="_blank" rel="noopener"><i class="fas fa-file-word"></i> Open Document</a>`:''}
+          ${hasImage? `<button class="p-btn primary" data-open="image" data-id="${p.id}"><i class="fas fa-image"></i> View</button>`:''}
+        </div>
+      </div>
+    </article>`;
+  }
+
+  function matches(p){
+    const cats = (p.categories || []).map(c => String(c).trim());
+    if (activeCategory !== 'all' && !cats.includes(activeCategory)) return false;
+    if (!term) return true;
+    const hay=[p.title,p.summary,(p.stack||[]).join(" "), (p.subcats||[]).join(" ")]
+      .join(" ").toLowerCase();
+    return hay.includes(term);
+  }
+
+  function updateCount(shown,total){
+    pCount.textContent = total ? `Showing ${shown} of ${total}` : '';
+  }
+
+  function apply(){
+    const v=sort.value;
+    currentResults = PROJECTS.filter(matches);
+
+    if(v==='new') currentResults.sort((a,b)=>(b.year||0)-(a.year||0));
+    if(v==='old') currentResults.sort((a,b)=>(a.year||0)-(b.year||0));
+    if(v==='az')  currentResults.sort((a,b)=>a.title.localeCompare(b.title));
+    if(v==='za')  currentResults.sort((a,b)=>b.title.localeCompare(a.title));
+
+    grid.innerHTML = '';
+    expanded = false;
+    render(false);
+  }
+
+  function render(append){
+    const total   = currentResults.length;
+    const already = append ? grid.children.length : 0;
+    const nextEnd = Math.min(total, already + pageSize);
+
+    for (let i = already; i < nextEnd; i++){
+      const p = currentResults[i];
+      if(!p) continue;
+      try { grid.insertAdjacentHTML('beforeend', cardHTML(p)); }
+      catch(err){ console.error('Card render failed:', p?.id || i, err); }
+    }
+
+    expanded = grid.children.length >= total && total > pageSize;
+    if (total > pageSize){
+      loadMoreBtn.style.display = 'inline-block';
+      loadMoreBtn.textContent = expanded ? 'Show less' : 'Load more';
+    } else {
+      loadMoreBtn.style.display = 'none';
+    }
+    updateCount(Math.min(grid.children.length, total), total);
+  }
+
+  chips.forEach(ch=>{
+    ch.addEventListener('click',()=>{
+      if (!('filter' in ch.dataset)) return;
+      chips.forEach(x=>x.setAttribute('aria-pressed','false'));
+      ch.setAttribute('aria-pressed','true');
+      activeCategory = ch.dataset.filter || 'all';
+      apply();
+    });
+  });
+  search.addEventListener('input',()=>{ term = search.value.trim().toLowerCase(); apply(); });
+  sort.addEventListener('change', apply);
+  loadMoreBtn.addEventListener('click', ()=>{
+    if (!expanded) {
+      render(true);
+    } else {
+      grid.innerHTML='';
+      expanded = false;
+      render(false);
+    }
+  });
+
+  // delegated clicks inside grid
+  grid.addEventListener('click',(e)=>{
+    const btn=e.target.closest('[data-open]');
+    if(!btn) return;
+    openProjectContent(btn.dataset.id, btn.dataset.open);
+  });
+
+  /* ---------- MODAL ---------- */
+  const modal=document.getElementById('projectModal');
+  const modalBody=document.getElementById('projectModalBody');
+  const modalClose=document.getElementById('modalClose');
+
+  function openModal(){ modal.style.display='flex'; document.body.style.overflow='hidden'; }
+  function closeModal(){ modal.style.display='none'; document.body.style.overflow='auto'; modalBody.innerHTML=''; }
+  // stop bubbling just in case
+  modalClose.addEventListener('click',(e)=>{ e.stopPropagation(); closeModal(); });
+  modal.addEventListener('click',(e)=>{ if(e.target===modal) closeModal(); });
+  addEventListener('keydown',(e)=>{ if(e.key==='Escape' && modal.style.display==='flex') closeModal(); });
+
+  // Only show the requested content
+  function openProjectContent(id,mode){
+    const p=PROJECTS.find(x=>x.id===id); if(!p) return;
+    modalBody.innerHTML = '';
+
+    if(mode==='video' && p.links?.video){
+      const v=document.createElement('video');
+      v.controls=true; v.src=encodeURI(p.links.video);
+      v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline','');
+      v.style.background='#000'; v.style.width='100%'; v.style.maxHeight='70vh';
+      v.style.position='relative'; v.style.zIndex='1';
+      modalBody.appendChild(v);
+    } else if(mode==='code' && p.links?.code){
+      const iframe=document.createElement('iframe');
+      iframe.width='100%'; iframe.height='520'; iframe.src=encodeURI(p.links.code);
+      iframe.style.background='#fff'; iframe.style.border='0'; iframe.style.borderRadius='12px';
+      iframe.loading='lazy'; iframe.style.position='relative'; iframe.style.zIndex='1';
+      modalBody.appendChild(iframe);
+    } else if(mode==='image' && p.image){
+      const img=document.createElement('img');
+      img.src=encodeURI(p.image); img.alt=p.title; img.style.borderRadius='12px';
+      img.style.maxHeight='70vh'; img.style.width='100%'; img.style.objectFit='contain';
+      img.style.position='relative'; img.style.zIndex='1';
+      modalBody.appendChild(img);
+    } else if(p.image){
+      const img=document.createElement('img');
+      img.src=encodeURI(p.image); img.alt=p.title; img.style.borderRadius='12px';
+      img.style.maxHeight='70vh'; img.style.width='100%'; img.style.objectFit='contain';
+      img.style.position='relative'; img.style.zIndex='1';
+      modalBody.appendChild(img);
+    }
+    openModal();
+  }
+  window.openProjectContent=openProjectContent;
+
+  /* ---------- Sticky controls logic ---------- */
+  const controls = document.getElementById('pControls');
+  const projSection = document.getElementById('projects');
+  function updateStickyControls(){
+    const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 80;
+    const rect = projSection.getBoundingClientRect();
+    const shouldStick = rect.top <= headerH + 12 && (rect.bottom - 340) > headerH;
+    controls.classList.toggle('unstick', !shouldStick);
+  }
+  addEventListener('scroll', updateStickyControls, {passive:true});
+  addEventListener('resize', updateStickyControls);
+  updateStickyControls();
+
+  /* ---------- CONTACT FORM ---------- */
+  const contactForm=document.getElementById('contactForm');
+  const submitText=document.getElementById('submitText');
+  const submitIcon=document.getElementById('submitIcon');
+
+  const contactInner=document.querySelector('.contact-inner');
+  const toast=document.createElement('div');
+  toast.id='formToast'; toast.setAttribute('role','status'); toast.setAttribute('aria-live','polite');
+  toast.textContent='Message sent successfully!'; contactInner.appendChild(toast);
+
+  contactForm.addEventListener('submit',async (e)=>{
+    e.preventDefault();
+    if(!contactForm.reportValidity()) return;
+    const btn=e.submitter || contactForm.querySelector('button[type=submit]');
+    btn.disabled=true; submitText.textContent='Sending…'; submitIcon.className='fas fa-spinner fa-spin';
+    try{
+      const res=await fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{'Accept':'application/json'}});
+      if(!res.ok) throw new Error('submit failed');
+      contactForm.reset(); submitText.textContent='Sent — thank you!'; submitIcon.className='fas fa-check';
+      toast.style.display='block';
+      setTimeout(()=>{
+        toast.style.display='none';
+        submitText.textContent='Send message'; submitIcon.className='fas fa-paper-plane'; btn.disabled=false;
+      }, 1800);
+    }catch(err){
+      alert('Please email me at tanvir.xf@gmail.com');
+      submitText.textContent='Send message'; submitIcon.className='fas fa-paper-plane'; btn.disabled=false;
+    }
+  });
+
+  /* ---------- INIT ---------- */
+  const yearEl = document.getElementById('current-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  apply();
+</script>
+</body>
+</html>
